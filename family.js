@@ -1,77 +1,141 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const noSpouse = document.getElementById('noSpouse');
-    const spouseFields = document.querySelectorAll('.spouse-field');
-    const noChildren = document.getElementById('noChildren');
-    const childrenContainer = document.getElementById('childrenContainer');
-    const addChildBtn = document.getElementById('addChildBtn');
+$(document).ready(function () {
 
-    function toggleFields(checkbox, fields) {
-        fields.forEach(field => {
-            if (!field) return;
-            field.disabled = checkbox.checked;
-            if (checkbox.checked) field.value = '';
-        });
-    }
+    $("#noSpouse").change(function (e) {
 
-    if (noSpouse) {
-        noSpouse.addEventListener('change', function () {
-            toggleFields(noSpouse, spouseFields);
-        });
-    }
+        if (this.checked) {
 
-    function refreshChildrenState() {
-        const childFields = document.querySelectorAll('.child-field');
-        toggleFields(noChildren, childFields);
-    }
+            $("#spouseSurname").val("");
+            $("#spouseFirstName").val("");
+            $("#spouseNameExtension").val("");
+            $("#spouseMiddleName").val("");
+            $("#spouseOccupation").val("");
+            $("#spouseEmployer").val("");
+            $("#spouseBusinessAddress").val("");
+            $("#spouseTelephone").val("");
 
-    if (noChildren) {
-        noChildren.addEventListener('change', function () {
-            refreshChildrenState();
-        });
-    }
+            $("#spouseSurname").prop("disabled", true);
+            $("#spouseFirstName").prop("disabled", true);
+            $("#spouseNameExtension").prop("disabled", true);
+            $("#spouseMiddleName").prop("disabled", true);
+            $("#spouseOccupation").prop("disabled", true);
+            $("#spouseEmployer").prop("disabled", true);
+            $("#spouseBusinessAddress").prop("disabled", true);
+            $("#spouseTelephone").prop("disabled", true);
 
-    if (addChildBtn && childrenContainer) {
-        addChildBtn.addEventListener('click', function () {
-            const childEntries = childrenContainer.querySelectorAll('.child-entry');
-            const index = childEntries.length + 1;
+        } else {
 
-            const newEntry = document.createElement('div');
-            newEntry.className = 'child-entry row mb-3';
-            newEntry.innerHTML = `
-                <div class="col-md-5">
-                    <div class="mb-3">
-                        <label for="childFullName_${index}" class="form-label">FULL NAME OF CHILDREN</label>
-                        <input type="text" class="form-control child-field" id="childFullName_${index}">
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="mb-3">
-                        <label for="childDateOfBirth_${index}" class="form-label">DATE OF BIRTH</label>
-                        <input type="date" class="form-control child-field" id="childDateOfBirth_${index}">
-                    </div>
-                </div>
-                <div class="col-md-2 d-flex align-items-end justify-content-end">
-                    <button type="button" class="btn btn-outline-danger btn-sm remove-child" aria-label="Remove child">×</button>
-                </div>
-            `;
+            $("#spouseSurname").prop("disabled", false);
+            $("#spouseFirstName").prop("disabled", false);
+            $("#spouseNameExtension").prop("disabled", false);
+            $("#spouseMiddleName").prop("disabled", false);
+            $("#spouseOccupation").prop("disabled", false);
+            $("#spouseEmployer").prop("disabled", false);
+            $("#spouseBusinessAddress").prop("disabled", false);
+            $("#spouseTelephone").prop("disabled", false);
 
-            if (noChildren && noChildren.checked) {
-                newEntry.querySelectorAll('.child-field').forEach(field => {
-                    field.disabled = true;
-                });
-            }
-
-            childrenContainer.appendChild(newEntry);
-        });
-    }
-
-    document.addEventListener('click', function (event) {
-        const removeBtn = event.target.closest('.remove-child');
-        if (removeBtn) {
-            const entry = removeBtn.closest('.child-entry');
-            if (entry && !entry.dataset.base) {
-                entry.remove();
-            }
+            $("#spouseSurname").val("");
+            $("#spouseFirstName").val("");
+            $("#spouseNameExtension").val("");
+            $("#spouseMiddleName").val("");
+            $("#spouseOccupation").val("");
+            $("#spouseEmployer").val("");
+            $("#spouseBusinessAddress").val("");
+            $("#spouseTelephone").val("");
         }
     });
+    
+});
+
+function refreshChildrenState() {
+    if ($("#noChildren").is(":checked")) {
+        $(".child-field").prop("disabled", true);
+    } else {
+        $(".child-field").prop("disabled", false);
+    }
+
+}
+
+if (noChildren) {
+    $(noChildren).change(function () {
+        refreshChildrenState();
+    });
+}
+
+if (addChildBtn && childrenContainer) {
+
+    $(addChildBtn).click(function () {
+
+        const index = $(childrenContainer).find(".child-entry").length + 1;
+
+        const newEntry = $(`
+            <div class="child-entry row mb-3">
+
+                <div class="col-md-5">
+                    <div class="mb-3">
+
+                        <label for="childFullName_${index}" class="form-label">
+                            FULL NAME OF CHILDREN
+                        </label>
+
+                        <input type="text"
+                               class="form-control child-field"
+                               id="childFullName_${index}">
+
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="mb-3">
+
+                        <label for="childDateOfBirth_${index}" class="form-label">
+                            DATE OF BIRTH
+                        </label>
+
+                        <input type="date"
+                               class="form-control child-field"
+                               id="childDateOfBirth_${index}">
+
+                    </div>
+                </div>
+
+                <div class="col-md-2 d-flex align-items-end justify-content-end">
+
+                    <button type="button"
+                            class="btn btn-outline-danger btn-sm remove-child"
+                            aria-label="Remove child">
+
+                        ×
+
+                    </button>
+
+                </div>
+
+            </div>
+        `);
+
+
+        if ($(noChildren).is(":checked")) {
+
+            newEntry.find(".child-field").prop("disabled", true);
+
+        }
+
+
+        $(childrenContainer).append(newEntry);
+
+    });
+
+}
+
+
+$(document).on("click", ".remove-child", function () {
+
+    const entry = $(this).closest(".child-entry");
+
+    if (entry.length && !entry.data("base")) {
+
+        entry.remove();
+
+    }
+
 });
