@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Personal Data Sheet</title>
+</head>
+
+<body>
+    <div class="container.text">
+        <h1 class="h1">CS Form No. 212</h1>
+        <p class="p1">Revised 2026</p> 
+    </div>
+
+    <div class="title">
+        <h2 class="title">Personal Data Sheet</h2>
+    </div>
+
+    <div class="warning">
+        <p class="p1" style="font-weight: bold; color: black">WARNING: Any misrepresentation made in the Personal Data Sheet and the Work Experience Sheet shall cause the filing of administrative/criminal case/s against the person
+concerned.</p>
+        <p class="p1" style="font-weight: bold; color: black">READ THE ATTACHED GUIDE TO FILLING OUT THE PERSONAL DATA SHEET (PDS) BEFORE ACCOMPLISHING THE PDS FORM</p>
+        <p class="p1" style="color: black">Print legibly if accomplished through own handwriting. Tick appropriate boxes (☐) and use separate sheet if necessary. Indicate N/A if not applicable. <span style="font-weight: bold;">DO NOT ABBREVIATE.</span></p>
+    </div>
+
+    <div class="container text">
+        <h3 class="h3">I. PERSONAL INFORMATION</h3>
+    </div>
+    <div class="container form-container">
+    
+            <div class="row">
+                 <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">LAST NAME</label>
+                        <input type="text" class="form-control" id="lastName">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">FIRST NAME</label>
+                        <input type="text" class="form-control" id="firstName">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="extensionName" class="form-label">NAME EXTENSION</label>
+                        <input type="text" class="form-control" id="extensionName">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="middleName" class="form-label">MIDDLE NAME</label>
+                        <input type="text" class="form-control" id="middleName">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="dateofBirth" class="form-label">DATE OF BIRTH</label>
+                        <input type="date" class="form-control" id="dateofBirth">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="placeOfBirth" class="form-label">PLACE OF BIRTH</label>
+                        <input type="text" class="form-control" id="placeOfBirth">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="sexatBirth" class="form-label">SEX AT BIRTH</label>
+                        <select class="form-control" id="sexatBirth">
+                            <option value="">SELECT AN OPTION</option>
+                            <option value="male">MALE</option>
+                            <option value="female">FEMALE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="civilStatus" class="form-label">CIVIL STATUS</label>
+                        <select class="form-control" id="civilStatus">
+                            <option value="">SELECT AN OPTION</option>
+                            <option value="single">SINGLE</option>
+                            <option value="married">MARRIED</option>
+                            <option value="widowed">WIDOWED</option>
+                            <option value="divorced">DIVORCED</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="height" class="form-label">HEIGHT</label>
+                        <input type="number" class="form-control" id="height">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">WEIGHT</label>
+                        <input type="number" class="form-control" id="weight">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="bloodType" class="form-label">BLOOD TYPE</label>
+                        <input type="text" class="form-control" id="bloodType">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="UMID" class="form-label">UMID NO.</label>
+                        <input type="number" class="form-control" id="UMID">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="Pagibig" class="form-label">PAGIBIG NO.</label>
+                        <input type="number" class="form-control" id="Pagibig">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PHILHEALTH" class="form-label">PHILHEALTH NO.</label>
+                        <input type="number" class="form-control" id="PHILHEALTH">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PHILSYS" class="form-label">PHILSYS NO.</label>
+                        <input type="number" class="form-control" id="PHILSYS">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="TIN" class="form-label">TIN NO.</label>
+                        <input type="number" class="form-control" id="TIN">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="AGENCY_EMPLOYEE" class="form-label">AGENCY EMPLOYEE NO.</label>
+                        <input type="number" class="form-control" id="AGENCY_EMPLOYEE">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="citizenship" class="form-label">CITIZENSHIP</label>
+                        <select class="form-control" id="citizenship">
+                            <option value="">SELECT AN OPTION</option>
+                            <option value="filipino">FILIPINO</option>
+                            <option value="dual">DUAL CITIZENSHIP</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="dualCitizenshipFields" hidden>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="dualCitizenshipType" class="form-label">DUAL CITIZENSHIP</label>
+                        <select class="form-control" id="dualCitizenshipType">
+                            <option value="">SELECT AN OPTION</option>
+                            <option value="birth">BIRTH</option>
+                            <option value="naturalization">NATURALIZATION</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="foreignCountry" class="form-label">FOREIGN COUNTRY</label>
+                        <input type="text" class="form-control" id="foreignCountry">
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="remark">RESIDENTIAL ADDRESS</h1>
+
+             <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="HOUSE_BLOCK" class="form-label">HOUSE/BLOCK NO.</label>
+                        <input type="text" class="form-control" id="HOUSE_BLOCK">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="STREET" class="form-label">STREET</label>
+                        <input type="text" class="form-control" id="STREET">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="SUBDIVISION" class="form-label">SUBDIVISION</label>
+                        <input type="text" class="form-control" id="SUBDIVISION">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="BARANGAY" class="form-label">BARANGAY</label>
+                        <input type="text" class="form-control" id="BARANGAY">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="CITY_MUNICIPALITY" class="form-label">CITY/MUNICIPALITY</label>
+                        <input type="text" class="form-control" id="CITY_MUNICIPALITY">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PROVINCE" class="form-label">PROVINCE</label>
+                        <input type="text" class="form-control" id="PROVINCE">
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="remark">PERMANENT ADDRESS</h1>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="sameAsResidential">
+                        <label class="form-check-label" for="sameAsResidential">SAME AS RESIDENTIAL ADDRESS</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PERMANENT_HOUSE_BLOCK" class="form-label">HOUSE/BLOCK NO.</label>
+                        <input type="text" class="form-control permanent-address" id="PERMANENT_HOUSE_BLOCK">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PERMANENT_STREET" class="form-label">STREET</label>
+                        <input type="text" class="form-control permanent-address" id="PERMANENT_STREET">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PERMANENT_SUBDIVISION" class="form-label">SUBDIVISION</label>
+                        <input type="text" class="form-control permanent-address" id="PERMANENT_SUBDIVISION">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PERMANENT_BARANGAY" class="form-label">BARANGAY</label>
+                        <input type="text" class="form-control permanent-address" id="PERMANENT_BARANGAY">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PERMANENT_CITY_MUNICIPALITY" class="form-label">CITY/MUNICIPALITY</label>
+                        <input type="text" class="form-control permanent-address" id="PERMANENT_CITY_MUNICIPALITY">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="PERMANENT_PROVINCE" class="form-label">PROVINCE</label>
+                        <input type="text" class="form-control permanent-address" id="PERMANENT_PROVINCE">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="TELEPHONE_MOBILE" class="form-label">TELEPHONE/MOBILE NO.</label>
+                        <input type="number" class="form-control" id="TELEPHONE_MOBILE">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="EMAIL" class="form-label">EMAIL ADDRESS</label>
+                        <input type="email" class="form-control" id="EMAIL">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12 d-flex justify-content-end">
+                    <a href="family.html" class="btn btn-primary" id="nextButton">NEXT</a>
+                </div>
+            </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

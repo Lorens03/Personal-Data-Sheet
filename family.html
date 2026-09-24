@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Family Background</title>
+</head>
+
+<body>
+    <div class="container.text">
+        <h1 class="h1">CS Form No. 212</h1>
+        <p class="p1">Revised 2026</p> 
+    </div>
+
+    <div class="title">
+        <h2 class="title">Personal Data Sheet</h2>
+    </div>
+
+    <div class="warning">
+        <p class="p1" style="font-weight: bold; color: black">WARNING: Any misrepresentation made in the Personal Data Sheet and the Work Experience Sheet shall cause the filing of administrative/criminal case/s against the person concerned.</p>
+        <p class="p1" style="font-weight: bold; color: black">READ THE ATTACHED GUIDE TO FILLING OUT THE PERSONAL DATA SHEET (PDS) BEFORE ACCOMPLISHING THE PDS FORM</p>
+        <p class="p1" style="color: black">Print legibly if accomplished through own handwriting. Tick appropriate boxes (☐) and use separate sheet if necessary. Indicate N/A if not applicable. <span style="font-weight: bold;">DO NOT ABBREVIATE.</span></p>
+    </div>
+
+    <div class="container text">
+        <h3 class="h3">II. FAMILY BACKGROUND</h3>
+    </div>
+    
+    <div class="container form-container">
+
+        <h1 class="remark">SPOUSE</h1>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="noSpouse">
+                    <label class="form-check-label" for="noSpouse">N/A IF NO SPOUSE</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseSurname" class="form-label">SPOUSE'S SURNAME</label>
+                    <input type="text" class="form-control spouse-field" id="spouseSurname">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseFirstName" class="form-label">SPOUSE'S FIRST NAME</label>
+                    <input type="text" class="form-control spouse-field" id="spouseFirstName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseNameExtension" class="form-label">SPOUSE'S NAME EXTENSION</label>
+                    <input type="text" class="form-control spouse-field" id="spouseNameExtension">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseMiddleName" class="form-label">SPOUSE'S MIDDLE NAME</label>
+                    <input type="text" class="form-control spouse-field" id="spouseMiddleName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseOccupation" class="form-label">SPOUSE'S OCCUPATION</label>
+                    <input type="text" class="form-control spouse-field" id="spouseOccupation">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseEmployer" class="form-label">SPOUSE'S EMPLOYER/BUSINESS NAME</label>
+                    <input type="text" class="form-control spouse-field" id="spouseEmployer">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseBusinessAddress" class="form-label">SPOUSE'S BUSINESS ADDRESS</label>
+                    <input type="text" class="form-control spouse-field" id="spouseBusinessAddress">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="spouseTelephone" class="form-label">SPOUSE'S TELEPHONE NO.</label>
+                    <input type="number" class="form-control spouse-field" id="spouseTelephone">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="remark">FATHER</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="fatherSurname" class="form-label">FATHER'S SURNAME</label>
+                    <input type="text" class="form-control" id="fatherSurname">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="fatherFirstName" class="form-label">FATHER'S FIRST NAME</label>
+                    <input type="text" class="form-control" id="fatherFirstName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="fatherNameExtension" class="form-label">FATHER'S NAME EXTENSION</label>
+                    <input type="text" class="form-control" id="fatherNameExtension">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="fatherMiddleName" class="form-label">FATHER'S MIDDLE NAME</label>
+                    <input type="text" class="form-control" id="fatherMiddleName">
+                    <i class="bi bi-exclamation-triangle-fill input-warning" id="fatherMiddleName"
+                        data-bs-toggle="tooltip" data-bs-placement="top" title="Please fill out this field">
+                    </i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="remark">MOTHER</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="motherMaidenSurname" class="form-label">MOTHER'S MAIDEN SURNAME</label>
+                    <input type="text" class="form-control" id="motherMaidenSurname">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="motherFirstName" class="form-label">MOTHER'S FIRST NAME</label>
+                    <input type="text" class="form-control" id="motherFirstName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="motherMiddleName" class="form-label">MOTHER'S MIDDLE NAME</label>
+                    <input type="text" class="form-control" id="motherMiddleName">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="remark">CHILDREN</h1>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="noChildren">
+                    <label class="form-check-label" for="noChildren">N/A IF NO CHILDREN</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="childrenContainer">
+            <div class="child-entry row mb-3" data-base="true">
+                <div class="col-md-5">
+                    <div class="mb-3">
+                        <label for="childFullName" class="form-label">FULL NAME OF CHILDREN</label>
+                        <input type="text" class="form-control child-field" id="childFullName">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-3">
+                        <label for="childDateOfBirth" class="form-label">DATE OF BIRTH</label>
+                        <input type="date" class="form-control child-field" id="childDateOfBirth">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12 d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-primary btn-sm" id="addChildBtn">ADD CHILD</button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <a href="personal.html" class="btn btn-secondary">BACK</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <a href="education.html" class="btn btn-primary" id="nextButton1">NEXT</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="family.js"></script>
+</body>
+
+</html>
