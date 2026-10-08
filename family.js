@@ -21,6 +21,7 @@ $(document).ready(function () {
             $("#spouseEmployer").prop("disabled", true);
             $("#spouseBusinessAddress").prop("disabled", true);
             $("#spouseTelephone").prop("disabled", true);
+            $(".spouse-field").removeClass("is-invalid is-valid");
 
         } else {
 
@@ -41,31 +42,36 @@ $(document).ready(function () {
             $("#spouseEmployer").val("");
             $("#spouseBusinessAddress").val("");
             $("#spouseTelephone").val("");
+            $(".spouse-field").removeClass("is-invalid is-valid");
         }
     });
     
 });
 
 function refreshChildrenState() {
-    if ($("#noChildren").is(":checked")) {
-        $(".child-field").prop("disabled", true);
-    } else {
-        $(".child-field").prop("disabled", false);
+    const noChildrenSelected = $("#noChildren").is(":checked");
+    $(".child-field")
+        .prop("disabled", noChildrenSelected)
+        .removeClass("is-invalid is-valid");
+
+    if (noChildrenSelected) {
+        $(".child-field").val("");
     }
 
+    $("#addChildBtn").prop("disabled", noChildrenSelected);
 }
 
-if (noChildren) {
-    $(noChildren).change(function () {
-        refreshChildrenState();
-    });
-}
+$(document).ready(function () {
+    $("#noChildren").on("change", refreshChildrenState);
+    refreshChildrenState();
 
-if (addChildBtn && childrenContainer) {
+    $("#addChildBtn").on("click", function () {
+        const childrenContainer = $("#childrenContainer");
+        if (!childrenContainer.length || $("#noChildren").is(":checked")) {
+            return;
+        }
 
-    $(addChildBtn).click(function () {
-
-        const index = $(childrenContainer).find(".child-entry").length + 1;
+        const index = childrenContainer.find(".child-entry").length + 1;
 
         const newEntry = $(`
             <div class="child-entry row mb-3">
@@ -114,18 +120,11 @@ if (addChildBtn && childrenContainer) {
         `);
 
 
-        if ($(noChildren).is(":checked")) {
-
-            newEntry.find(".child-field").prop("disabled", true);
-
-        }
-
-
-        $(childrenContainer).append(newEntry);
+        childrenContainer.append(newEntry);
 
     });
 
-}
+});
 
 
 $(document).on("click", ".remove-child", function () {
