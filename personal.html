@@ -11,7 +11,7 @@
     <title>Personal Data Sheet</title>
 </head>
 
-<body>
+<body data-section="personal">
     <div class="container.text">
         <h1 class="h1">CS Form No. 212</h1>
         <p class="p1">Revised 2026</p> 
@@ -307,7 +307,10 @@ concerned.</p>
             </div>
 
             <div class="row mt-4">
-                <div class="col-md-12 d-flex justify-content-end">
+                <div class="col-md-6">
+                    <a href="view_pds.php" class="btn btn-outline-secondary">SAVED PDS RECORDS</a>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
                     <a href="family.html" class="btn btn-primary" id="nextButton">NEXT</a>
                 </div>
             </div>
@@ -315,5 +318,6 @@ concerned.</p>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="pds.js"></script>
 </body>
 </html>

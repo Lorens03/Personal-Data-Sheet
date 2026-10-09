@@ -385,7 +385,7 @@ $(document).ready(function () {
             return;
         }
 
-        if (isEmpty("#graduateTo")) {
+        if (isEmpty("#gradTo")) {
             e.preventDefault();
             return;
         }
@@ -405,7 +405,6 @@ $(document).ready(function () {
             return;
         }
 
-        alert("Form submitted successfully!");
     });
 });
 
