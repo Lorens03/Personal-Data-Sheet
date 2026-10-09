@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . "/database/database.php";
+require_once __DIR__ . "/database.php";
 
 function h($value)
 {
@@ -17,14 +17,14 @@ $records = $conn->query($sql);
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
   <title>Saved PDS Records</title>
 </head>
 <body>
   <main class="container form-container">
     <h1>Saved PDS Records</h1>
-    <p><a class="btn btn-primary" href="personal.html">CREATE NEW PDS</a></p>
+    <p><a class="btn btn-primary" href="../personal.html">CREATE NEW PDS</a></p>
     <div class="table-responsive">
       <table class="table table-striped align-middle">
         <thead><tr><th>Name</th><th>Last updated</th><th>Actions</th></tr></thead>

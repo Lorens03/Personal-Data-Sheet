@@ -86,7 +86,7 @@
 
   async function loadRecord() {
     if (!recordId) return;
-    const record = await requestJson(`read_pds.php?id=${encodeURIComponent(recordId)}`);
+    const record = await requestJson(`database/read_pds.php?id=${encodeURIComponent(recordId)}`);
     recordId = String(record.id);
     if (record.data && record.data[section]) restoreValues(record.data[section]);
     recordLoaded = true;
@@ -113,7 +113,7 @@
       throw recordLoadError || new Error("The selected PDS record could not be loaded.");
     }
 
-    const endpoint = recordId ? "update_pds.php" : "save_pds.php";
+    const endpoint = recordId ? "database/update_pds.php" : "database/save_pds.php";
     const result = await requestJson(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -165,7 +165,7 @@
       event.preventDefault();
       try {
         await saveSection();
-        window.location.assign("view_pds.php");
+        window.location.assign("database/view_pds.php");
       } catch (error) {
         showStatus(error.message);
       }

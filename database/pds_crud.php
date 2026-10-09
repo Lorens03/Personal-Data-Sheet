@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . "/database/database.php";
+require_once __DIR__ . "/database.php";
 
 class PdsRecordNotFoundException extends RuntimeException
 {
@@ -28,24 +28,24 @@ function pdsFieldMaps()
                 "PHILHEALTH" => "philhealth_no",
                 "PHILSYS" => "philsys_no",
                 "TIN" => "tin_no",
-                "AGENCY_EMPLOYEE" => "agency_employee_no",
+                "AGENCY EMPLOYEE" => "agency_employee_no",
                 "citizenship" => "citizenship",
                 "dualCitizenshipType" => "dual_citizenship_type",
                 "foreignCountry" => "foreign_country",
-                "HOUSE_BLOCK" => "house_block",
-                "STREET" => "street",
-                "SUBDIVISION" => "subdivision",
-                "BARANGAY" => "barangay",
-                "CITY_MUNICIPALITY" => "city_municipality",
-                "PROVINCE" => "province",
-                "PERMANENT_HOUSE_BLOCK" => "permanent_house_block",
-                "PERMANENT_STREET" => "permanent_street",
-                "PERMANENT_SUBDIVISION" => "permanent_subdivision",
-                "PERMANENT_BARANGAY" => "permanent_barangay",
-                "PERMANENT_CITY_MUNICIPALITY" => "permanent_city_municipality",
-                "PERMANENT_PROVINCE" => "permanent_province",
-                "TELEPHONE_MOBILE" => "telephone_mobile",
-                "EMAIL" => "email"
+                "House Block" => "house_block",
+                "Street" => "street",
+                "Subdivision" => "subdivision",
+                "Barangay" => "barangay",
+                "City" => "city_municipality",
+                "Province" => "province",
+                "Permanent House Block" => "permanent_house_block",
+                "Permanent Street" => "permanent_street",
+                "Permanent Subdivision" => "permanent_subdivision",
+                "Permanent Barangay" => "permanent_barangay",
+                "Permanent City Municipality" => "permanent_city_municipality",
+                "Permanent Province" => "permanent_province",
+                "Telephone No." => "telephone_mobile",
+                "Email Address" => "email"
             )
         ),
         "family" => array(
@@ -66,8 +66,6 @@ function pdsFieldMaps()
                 "motherMaidenSurname" => "mother_maiden_surname",
                 "motherFirstName" => "mother_first_name",
                 "motherMiddleName" => "mother_middle_name",
-                "noSpouse" => "no_spouse",
-                "noChildren" => "no_children"
             )
         ),
         "education" => array(

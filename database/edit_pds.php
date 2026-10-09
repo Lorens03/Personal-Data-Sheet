@@ -14,5 +14,5 @@ if ($record === null) {
     exit("PDS record not found.");
 }
 
-header("Location: personal.html?id=" . $id);
+header("Location: ../personal.html?id=" . $id);
 exit;
